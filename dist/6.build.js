@@ -1,0 +1,2 @@
+webpackJsonp([6],{23:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var l=t(44),r=t(4),s=r(null,l.a,!1,null,null,null);n.default=s.exports},44:function(e,n,t){"use strict";var l=function(){var e=this,n=e.$createElement;return(e._self._c||n)("div",[e._v("\n    this is follow page\n")])},r=[],s={render:l,staticRenderFns:r};n.a=s}});
+//# sourceMappingURL=6.build.js.map

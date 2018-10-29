@@ -1,0 +1,2 @@
+webpackJsonp([2],{26:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n(31),s=n(47),i=n(4),u=i(r.a,s.a,!1,null,null,null);t.default=u.exports},31:function(e,t,n){"use strict";t.a={}},47:function(e,t,n){"use strict";var r=function(){var e=this,t=e.$createElement;return(e._self._c||t)("div",[e._v("\n    this is city page\n")])},s=[],i={render:r,staticRenderFns:s};t.a=i}});
+//# sourceMappingURL=2.build.js.map

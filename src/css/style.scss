@@ -1,0 +1,308 @@
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #c7bba6;
+    z-index: 99;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 1rem;
+    border-top: .01rem solid #ccc;
+    ul {
+        width: 100%;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        li {
+            width: 20%;
+            line-height: .8rem;
+            text-align: center;
+            color: #fff;
+            font-size: .32rem;
+            img {
+                height: .7rem;
+            }
+            span {
+                display: inline-block;
+                width: .5rem;
+                height: .4rem;
+                text-align: center;
+                line-height: .4rem;
+                border-radius: 40%;
+                background: yellow;
+                position: relative;
+                top: -.2rem;
+                right: .1rem;
+                color: #000;
+            }
+        }
+    }
+    .router-link-active {
+        border-bottom: .03rem solid #fff;
+    }
+}
+
+.box {
+    width: 100%;
+    position: relative;
+    .heartbox {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: red;
+        font-size: .9rem;
+        z-index: 999;
+        opacity: 0;
+    }
+    .heartbox.type {
+        display: block;
+        animation: changeHeart 2s forwards;
+    }
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 1rem;
+    align-items: center;
+    padding: 0 .5rem;
+    box-sizing: border-box;
+    span.iconfont {
+        font-size: .4rem;
+        color: #fff;
+    }
+    div {
+        display: flex;
+        p {
+            font-size: .35rem;
+            color: #fff;
+            margin: 0 .18rem;
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    &>h2 {
+        font-size: .6rem;
+        text-align: center;
+        &:first-child {
+            margin-top: 2rem;
+        }
+    }
+    &>h1 {
+        width: 100%;
+        margin-top: .5rem;
+        position: relative;
+        .video {
+            width: 100%;
+            height: 4.5rem;
+        }
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: .8rem;
+            height: .8rem;
+            transform: translate3d(-.4rem, -.4rem, 0);
+        }
+    }
+    .con {
+        width: 70%;
+        margin-left: 5%;
+        position: absolute;
+        left: 0;
+        bottom: -1.5rem;
+        p {
+            &:first-child {
+                font-size: .35rem;
+                color: #fff;
+            }
+            &:last-child {
+                color: #fff;
+                margin-top: .1rem;
+                line-height: .6rem;
+                font-size: .35rem;
+            }
+        }
+    }
+}
+
+@keyframes changeHeart {
+    0% {
+        transform: scale(0.5) rotate(0);
+        opacity: 0;
+    }
+    20% {
+        transform: scale(1.5) rotate(30deg);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(2) rotate(-30deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) rotate(0);
+        opacity: 0;
+    }
+}
+
+.sign {
+    width: 1rem;
+    position: fixed;
+    right: .3rem;
+    top: 30%;
+    li {
+        text-align: center;
+        margin-top: .5rem;
+        color: #fff;
+        font-size: .25rem;
+        img {
+            width: .9rem;
+            height: .9rem;
+            border-radius: 50%;
+        }
+        i.iconfont {
+            display: block;
+            color: #fff;
+            font-size: .6rem;
+        }
+        i.icon-weixin {
+            color: green;
+        }
+    }
+}
+
+.mask {
+    width: 100%;
+    height: 10rem;
+    background: #2c2822;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    transform: translate3d(0, 100%, 0);
+    transition: transform .3s linear;
+    .number {
+        width: 100%;
+        height: .9rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-shrink: 0;
+        span {
+            &:first-child {
+                margin-right: 2.5rem;
+                color: #ccc;
+            }
+        }
+        .close {
+            width: .5rem;
+            height: .5rem;
+            color: #ccc;
+        }
+    }
+}
+
+.mask.show {
+    transform: translate3d(0, 0, 0);
+    transition: transform .3s linear;
+}
+
+.list {
+    width: 100%;
+    height: 8.2rem;
+    overflow-y: auto;
+    .recommdList {
+        width: 100%;
+        dl {
+            width: 92%;
+            height: 2rem;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            dt {
+                width: 12.5%;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+            dd {
+                flex: 1;
+                margin-left: .2rem;
+                border-bottom: .01rem solid #505052;
+                h3 {
+                    font-weight: normal;
+                    font-size: .3rem;
+                    color: #ccc;
+                }
+                .title {
+                    font-size: .34rem;
+                    line-height: .5rem;
+                }
+                .time {
+                    margin-bottom: .25rem;
+                    font-size: .25rem;
+                    color: #ccc;
+                }
+            }
+            &>p {
+                color: #ccc;
+                i {
+                    display: block;
+                    font-size: .4rem;
+                    font-style: normal;
+                }
+                i.active {
+                    color: red;
+                }
+                span {
+                    font-size: .28rem;
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.talk {
+    width: 100%;
+    height: .9rem;
+    background: #000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input {
+        flex: 1;
+        display: block;
+        height: 100%;
+        background: #000;
+        border: none;
+        text-indent: 2em;
+        color: #fff;
+        outline: none;
+    }
+    p {
+        width: 30%;
+        display: block;
+        span {
+            margin-left: .1rem;
+            font-size: .35rem;
+        }
+    }
+}
